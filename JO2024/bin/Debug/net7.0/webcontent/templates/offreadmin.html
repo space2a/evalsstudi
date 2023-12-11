@@ -1,0 +1,36 @@
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion%id%" aria-expanded="true" aria-controls="Accordion%id%">
+          Offre : %name%, ventes : %ventes%
+      </button>
+    </h2>
+    <div id="Accordion%id%" class="accordion-collapse collapse">
+      <div class="accordion-body">
+          <form action="EditOffre" id="editOffre" method="post" target="dummyframe">
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+            <input style="display: none;" class="textbox" type="text" id="id" name="id" value="%id%" required>
+
+            <p>Nom de l'offre</p>
+            <input style="margin-left: 1rem;" class="textbox" type="text" id="name" name="name" placeholder="Nom de l'offre" value="%name%" required><br><br>
+            
+            <p>Titre dans la boutique</p>
+            <input style="margin-left: 1rem;" class="textbox" type="text" id="displayTitle" name="displayTitle" value="%displayTitle%" placeholder="Titre dans la boutique" required><br><br>
+            
+            <p>Description dans la boutique</p>
+            <input style="margin-left: 1rem;" class="textbox" type="text" id="displayDescription" name="displayDescription" value="%displayDescription%" placeholder="Description dans la boutique" required><br><br>
+            
+            <p>Prix de l'offre</p>
+            <input style="margin-left: 1rem;" class="textbox" type="text" id="price" name="price" value="%price%" placeholder="Prix de l'offre" required><br><br>
+            
+            <p>Nombre d'accès</p>
+            <input style="margin-left: 1rem;" class="textbox" type="text" id="access" name="access" value="%access%" placeholder="Nombre d'accès" required><br><br>
+            
+            <p>Chemin de l'image</p>
+            <input style="margin-left: 1rem;" class="textbox" type="text" id="imagepath" name="imagepath" value="%imagepath%" placeholder="Chemin de l'image" required><br><br>
+            
+            <button class="binverted" type="submit">Appliquer ces modifications</button>
+            <button class="binverted" style="float:right;" onclick="RemoveOffre('%id%')">Supprimer cet offre</button>
+          </form>
+      </div>
+    </div>
+  </div>
